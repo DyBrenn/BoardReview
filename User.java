@@ -20,8 +20,8 @@ public class User{
 
 	public static void main(String[] args){
 	}
-	public boolean checkUser(String user, String pass) {
-		boolean rtrn = false;
+	public boolean[] checkUser(String user, String pass) {
+		boolean rtrn[] = new boolean[2];
 		try {
 	         File inputFile = new File("users.xml");
 	         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -29,8 +29,8 @@ public class User{
 	         Document doc = docBuilder.parse(inputFile);
 	         Node root = doc.getFirstChild();
 	         NodeList list = doc.getElementsByTagName("user");
-	         boolean found1 = false;
-	         boolean found2 = false;
+	         boolean found1 = false; /* is username in database*/
+	         boolean found2 = false; /*is username and password combination in database*/
 	         /*iterate through all of users in database*/
 	         for (int temp = 0; temp < list.getLength(); temp++) {
 	        	 Node node = list.item(temp);
@@ -47,7 +47,8 @@ public class User{
 	                    	 }
 	        	 }
 	         }
-	         rtrn = found2;
+	         rtrn[0] = found1;
+	         rtrn[1] = found2;
 	         }catch (Exception e) {
 		         e.printStackTrace();
 		      }
@@ -81,7 +82,7 @@ public class User{
 		      }
 		return rtrn;
 	}
-	private static void createUser(String user_name, String password, String location) {
+	public static void createUser(String user_name, String password, String location) {
 		try {
 			 user_name = user_name.toLowerCase();
 			 location = location.toLowerCase();
