@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="712.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/8.0.162-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CommentPageController">
+   <children>
+      <AnchorPane layoutX="-18.0" layoutY="-22.0" prefHeight="796.0" prefWidth="1167.0" style="-fx-background-color: #add8e6;">
+         <children>
+            <TextField id="SearchBar4" fx:id="SearchBar3" layoutX="397.0" layoutY="57.0" prefHeight="33.0" prefWidth="486.0" promptText="Search for a restaurant">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="GoButton3" layoutX="896.0" layoutY="57.0" mnemonicParsing="false" onAction="#SearchRestaurant3" style="-fx-background-color: #00008b;" text="GO" textFill="LIGHTBLUE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="HomeButton3" layoutX="138.0" layoutY="58.0" mnemonicParsing="false" onAction="#GoToHomePage" style="-fx-background-color: #00008b;" text="Home" textFill="LIGHTBLUE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="973.0" layoutY="62.0" style="-fx-background-color: #00008b;" text="Comment Page" textFill="ORANGE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="text" layoutX="39.0" layoutY="451.0" prefHeight="185.0" prefWidth="512.0" />
+            <Button fx:id="Submit" layoutX="43.0" layoutY="725.0" mnemonicParsing="false" onAction="#AddReview" style="-fx-background-color: #00008b;" text="Submit" textFill="LIGHTBLUE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="29.0" layoutY="287.0" text="Rating" textFill="DARKBLUE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="390.0" text="Review" textFill="DARKBLUE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField id="SearchBar4" fx:id="score" layoutX="138.0" layoutY="283.0" prefHeight="38.0" prefWidth="287.0" promptText="Enter a rating out of 10">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
